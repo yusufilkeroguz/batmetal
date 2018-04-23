@@ -1,0 +1,51 @@
+.tv-shows {
+  text-align: left;
+  box-sizing: border-box;
+
+  &.list {
+    border-top: 1px solid #ccc;
+  }
+
+  .tv-show {
+    padding: 20px 20px;
+    border-bottom: 1px solid #cccccc;
+
+    .thumbnail, .image {
+      display: inline-block;
+      vertical-align: middle;
+
+      @include breakpoint(mobileonly) {
+        width: 100%;
+      }
+
+      & > img {
+        vertical-align: middle;
+
+        @include breakpoint(mobileonly) {
+          width: 100%;
+        }
+      }
+    }
+
+    .content {
+      display: inline-block;
+      width: 1000px;
+      padding: 20px;
+      box-sizing: border-box;
+      vertical-align: middle;
+
+      @include breakpoint(mobileonly) {
+        width: 100%;
+        padding: 20px 0;
+      }
+
+      .title {
+        display: block;
+      }
+
+      .description {
+        display: inline-block;
+      }
+    }
+  }
+}

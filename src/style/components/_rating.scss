@@ -1,0 +1,15 @@
+@each $type in ("rating-empty", "rating-full") {
+  .#{$type} {
+    background-image: url("../image/#{$type}.png");
+    width: 80px;
+    height: 40px;
+    display: block;
+
+
+    @include breakpoint(mobileonly) {
+      width: 40px;
+      height: 20px;
+      background-size: 100%;
+    }
+  }
+}
