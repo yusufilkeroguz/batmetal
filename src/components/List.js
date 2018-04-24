@@ -6,7 +6,7 @@ import {removeHtmlTagsFromString, parseArrayToString} from "./../library/Utils";
 const List = (props) => (
     <li className={props.className}>
         <Link className="thumbnail" to={`/detail/${props.id}`}>
-            <img src={props.image.medium} alt={props.name} width="200" height="auto"/>
+            <img src={props.image ? props.image.medium : ""} alt={props.name} width="200" height="auto"/>
         </Link>
         <div className="content">
             <Link className="title" to={`/detail/${props.id}`}>

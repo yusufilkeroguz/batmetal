@@ -10,10 +10,9 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {apiData: [], isFetching: false};
+        this.state = {apiData: []};
     }
     async componentWillMount() {
-        this.setState({isFetching: true});
         let data = await callTvMazeApi();
         this.setState({apiData: data});
     }
@@ -21,7 +20,7 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <Main apiData={this.state.apiData} fetching={this.state.isFetching}/>
+                <Main apiData={this.state.apiData} />
             </Router>
         );
     }

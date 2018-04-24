@@ -14,7 +14,7 @@ const Detail = (props) => {
             <main className="tv-shows">
                 <div className="tv-show">
                     <div className="image">
-                        <img src={obj.image.original} alt={obj.name} width={200}/>
+                        <img src={props.image ? props.image.original : ""} alt={obj.name} width={200}/>
                     </div>
                     <div className="content">
                         <h1>{obj.name}</h1>
